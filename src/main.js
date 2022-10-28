@@ -72,3 +72,18 @@ const cardNumberPattern = {
 }
 
 const cardNumberMasked = IMask(cardNumber, cardNumberPattern)
+
+const addButton = document.getElementById('add-card')
+addButton.addEventListener('click', () => {
+  alert('Cartão adicionado!')
+})
+
+document.querySelector('form').addEventListener('submit', event => {
+  event.preventDefault()
+})
+
+const cardHolder = document.getElementById('card-holder')
+cardHolder.addEventListener('input', () => {
+  const ccHolder = document.querySelector('.cc-holder .value')
+  ccHolder.innerText = cardHolder.value
+})
